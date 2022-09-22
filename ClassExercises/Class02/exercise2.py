@@ -14,17 +14,18 @@ stock["apple"]= 0
 stock["orange"] =32
 stock["pear"]= 15
 
+
 #Show all prices and stock
 
 for food in prices:
     print(food)
-    print("price: %s" % prices[food])
-    print("stock: %s" % stock[food])
+    print("price: {}".format(prices[food]))
+    print("stock: {}".format(stock[food]))
 
 total=0
-for price in prices:
-    money= prices[price]*stock[price]
+for food in prices:
+    money= prices[food]*stock[food]
     print(money)
-    total=total +money
+    total = total + money
 
 print("The total money is", total)

@@ -28,9 +28,8 @@ for student in students:
 
 def average(numbers):
     total=sum(numbers)
-    total=float(total)
-    media= total/ (len(numbers))
-    return media
+    avg = total / (len(numbers))
+    return avg
 
 def get_average(student):
     homework=average(student["homework"])
@@ -51,22 +50,11 @@ def get_letter_grade(score):
     else:
         return "F"
 
+print(get_average(lloyd))
 print(get_letter_grade(get_average(lloyd)))
 
-
-
-
-def get_class_average(students):
-      results=[]
-      for student in students:
-          r=get_average(student)
-          results.append(r)
-
-      return average(results)
-
-
-students=[lloyd,alice,tyler]
-
-print(get_class_average(students))
-
-print(get_letter_grade(get_class_average(students)))
+for student in students:
+    name = student["name"]
+    gradeNumber = get_average(student)
+    gradeLetter = get_letter_grade(gradeNumber)
+    print("Name: {}, Grade Number: {}, Grade Letter: {}".format(name,gradeNumber,gradeLetter))

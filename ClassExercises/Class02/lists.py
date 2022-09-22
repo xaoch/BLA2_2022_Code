@@ -69,7 +69,7 @@ print(exampleList)
 
 growingList =[]
 print(growingList)
-growingList.append(1)
+growingList.append(5)
 growingList.append(25)
 growingList.append(90)
 print(growingList)
